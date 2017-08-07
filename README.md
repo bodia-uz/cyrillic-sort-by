@@ -2,6 +2,10 @@
 
 `cyrillicSortBy` is function to sort array. Ensure cyrillic items is first
 
+```js
+const sortedItems = cyrillicSortBy(items, 'name');
+```
+
 ## Installation
 
 ```sh
