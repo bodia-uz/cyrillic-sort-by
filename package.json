@@ -1,0 +1,36 @@
+{
+  "name": "cyrillic-sort-by",
+  "version": "1.0.0",
+  "description": "cyrillic sortBy",
+  "main": "lib/cyrillicSortBy.js",
+  "jsnext:main": "src/cyrillicSortBy.js",
+  "module": "src/cyrillicSortBy.s",
+  "scripts": {
+    "build": "babel src --out-dir lib --ignore '**/*.test.js'",
+    "prettier": "prettier 'src/**/*.js' --write",
+    "test": "jest",
+    "precommit": "lint-staged",
+    "prepare": "rm -rf ./lib && npm run build"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bodia-uz/cyrillic-sort-by"
+  },
+  "author": "Bohdan Lyzanets <bogdan.uz@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/bodia-uz/cyrillic-sort-by",
+  "devDependencies": {
+    "babel-cli": "6.24.1",
+    "babel-preset-env": "1.6.0",
+    "husky": "0.14.3",
+    "jest": "20.0.4",
+    "lint-staged": "4.0.3",
+    "prettier": "1.5.3"
+  }
+}
